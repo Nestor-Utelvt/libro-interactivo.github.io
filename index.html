@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultura Esmeraldeña - Libro Interactivo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="book-container">
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        
+        <div class="book">
+            <div class="book-spine"></div>
+            
+            <!-- Portada -->
+            <div class="page active" id="portada" role="region" aria-labelledby="portada-heading">
+                <div class="cover-design">
+                    <h1 class="cover-title" id="portada-heading">Cultura Esmeraldeña</h1>
+                    <p class="cover-subtitle">Resistencia, Identidad y Tradición</p>
+                    <p>Un viaje interactivo por la riqueza cultural de Esmeraldas</p>
+                    <button class="start-button" onclick="book.showPage('indice')" aria-label="Abrir libro interactivo sobre cultura esmeraldeña">
+                        Abrir Libro
+                    </button>
+                    <p class="cover-author">Proyecto Educativo Interactivo</p>
+                </div>
+                <div class="page-number">Portada</div>
+            </div>
+            
+            <!-- Índice -->
+            <div class="page" id="indice" role="region" aria-labelledby="indice-heading">
+                <h2 id="indice-heading">Índice</h2>
+                
+                <div class="index-list">
+                    <ul>
+                        <li><a href="#" onclick="book.showPage('introduccion')" aria-label="Ir a la página de introducción">Introducción</a></li>
+                        <li><a href="#" onclick="book.showPage('objetivos')" aria-label="Ir a la página de objetivos">Objetivos del Libro</a></li>
+                        <li><a href="#" onclick="book.showPage('que-es')" aria-label="Ir a la página sobre qué es un libro interactivo">¿Qué es un Libro Interactivo?</a></li>
+                        <li><a href="#" onclick="book.showPage('importancia')" aria-label="Ir a la página sobre la importancia del libro interactivo">Importancia del Libro Interactivo</a></li>
+                        <li><a href="#" onclick="book.showPage('beneficios')" aria-label="Ir a la página sobre beneficios">Beneficios del Libro Interactivo</a></li>
+                        <li><a href="#" onclick="book.showPage('ensenanza')" aria-label="Ir a la página sobre enseñanza-aprendizaje">Cómo Ayuda en el Proceso de Enseñanza-Aprendizaje</a></li>
+                        <li><a href="#" onclick="book.showPage('origenes')" aria-label="Ir a la página sobre los orígenes">Los Orígenes del Pueblo Esmeraldeño</a></li>
+                        <li><a href="#" onclick="book.showPage('marco-historico')" aria-label="Ir a la página sobre marco histórico">Marco Histórico-Cultural</a></li>
+                        <li><a href="#" onclick="book.showPage('territorio')" aria-label="Ir a la página sobre territorio">Territorio, Ambiente y Cultura</a></li>
+                        <li><a href="#" onclick="book.showPage('lenguas')" aria-label="Ir a la página sobre lenguas">Lenguas y Diversidad Lingüística</a></li>
+                        <li><a href="#" onclick="book.showPage('poetas')" aria-label="Ir a la página sobre poetas">Poetas y Escritores</a></li>
+                        <li><a href="#" onclick="book.showPage('leyendas')" aria-label="Ir a la página sobre leyendas">Leyendas Tradicionales</a></li>
+                        <li><a href="#" onclick="book.showPage('musica')" aria-label="Ir a la página sobre música">Música y Patrimonio Inmaterial</a></li>
+                        <li><a href="#" onclick="book.showPage('estudiantes')" aria-label="Ir a la página sobre estudiantes">Poesía y Canciones Estudiantiles</a></li>
+                        <li><a href="#" onclick="book.showPage('anexo')" aria-label="Ir a la página de anexo">Anexo: Galería del Equipo</a></li>
+                    </ul>
+                </div>
+                
+                <div class="page-number">Índice</div>
+            </div>
+            
+            <!-- Introducción -->
+            <div class="page" id="introduccion" role="region" aria-labelledby="intro-heading">
+                <h2 id="intro-heading">Introducción</h2>
+                <p>La cultura esmeraldeña constituye una de las expresiones más ricas y resistentes del Ecuador, caracterizada por su herencia afrodescendiente, indígena y popular, en estrecha relación con el mar, la selva y el río. Desde la época colonial, el pueblo esmeraldeño ha forjado una identidad basada en la libertad y la dignidad, aunque históricamente invisibilizada dentro de los relatos oficiales.</p>
+                
+                <p>Este estudio aborda de forma integral los ámbitos más representativos de su cultura —música, danza, oralidad, gastronomía, religiosidad, educación intercultural, arte y deporte— con el propósito de comprender sus significados y los desafíos que enfrenta ante los procesos de globalización y la limitada valoración institucional.</p>
+                
+                <p>Es importante señalar que la información aquí contenida se fundamenta en diversas fuentes académicas y literarias. Los textos, fragmentos y referencias pertenecen a sus respectivos autores, y han sido recopilados con fines exclusivamente educativos y formativos, respetando los derechos intelectuales y reconociendo sus aportes al patrimonio cultural del país.</p>
+                
+                <!-- Imagen de introducción -->
+                <img src="images/intro.webp" alt="Introducción a la cultura esmeraldeña" class="team-photo" loading="lazy">
+                
+                <div class="activity">
+                    <h3>Actividad: Pregunta de Reflexión</h3>
+                    <p>¿Por qué crees que es importante conocer y valorar la cultura esmeraldeña? ¿Qué aspectos de esta cultura te parecen más interesantes?</p>
+                    <textarea style="width: 100%; min-height: 100px; padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-top: 10px; background-color: rgba(255,255,255,0.7);" 
+                              placeholder="Escribe tu respuesta aquí..."
+                              aria-label="Área para escribir tu respuesta sobre la importancia de la cultura esmeraldeña"></textarea>
+                </div>
+                <div class="page-number">1</div>
+            </div>
+            
+            <!-- Objetivos -->
+            <div class="page" id="objetivos" role="region" aria-labelledby="objetivos-heading">
+                <h2 id="objetivos-heading">Objetivos Del Libro Interactivo</h2>
+                <p>Este libro no nació solo para enseñar. Nació para sentir, recordar y reconocer lo que somos.</p>
+                
+                <p>Surge del deseo profundo de mirar hacia Esmeraldas, hacia sus raíces afrodescendientes, indígenas y mestizas, y decir con orgullo: "Esta es nuestra historia, esta es nuestra voz."</p>
+                
+                <p>Su objetivo principal es preservar la identidad esmeraldeña, rescatar su música, sus leyendas, su lengua, sus luchas y su alegría, para que las nuevas generaciones aprendan no solo con la mente, sino también con el corazón.</p>
+                
+                <p>Este libro busca motivar a los estudiantes a leer, escribir, crear y reflexionar, integrando textos, canciones, imágenes y actividades que hagan del aprendizaje una experiencia viva.</p>
+                
+                <p>Más que un material académico, es una invitación a sentirse parte de una herencia colectiva, a valorar la diversidad y a mantener viva la memoria de un pueblo que ha sabido resistir y florecer.</p>
+                               
+                <div class="page-number">2</div>
+            </div>
+            
+            <!-- ¿Qué es un Libro Interactivo? -->
+            <div class="page" id="que-es" role="region" aria-labelledby="que-es-heading">
+                <h2 id="que-es-heading">¿Qué es un Libro Interactivo?</h2>
+                <p>Un libro interactivo es mucho más que un conjunto de páginas.</p>
+                
+                <p>Es un puente entre el conocimiento y la emoción, entre la palabra escrita y la experiencia viva.</p>
+                
+                <p>En lugar de leer pasivamente, el lector participa, explora y crea. Puede escuchar una canción, ver un video, observar una imagen o responder una actividad que lo invita a pensar, imaginar y construir su propio aprendizaje.</p>
+                
+                <p>Como se explica en tu documento, estos libros mezclan tecnología, arte y educación, y convierten la lectura en una aventura multisensorial: puedes tocar, escuchar, mirar y reflexionar al mismo tiempo.</p>
+                
+                <p>Así, el aprendizaje deja de ser una obligación y se convierte en un viaje de descubrimiento, donde cada clic, cada palabra y cada imagen tiene algo que decir y algo que enseñar.</p>
+                
+                <!-- Imagen de libro interactivo -->
+                <img src="images/libro.png" alt="Ejemplo de libro interactivo" class="team-photo" loading="lazy">
+                
+                <div class="activity">
+                    <h3>Actividad: Arrastrar y Soltar</h3>
+                    <p>Relaciona cada elemento con su descripción:</p>
+                    <div class="drag-drop-container">
+                        <div class="drag-item" draggable="true" data-type="traditional">Libro tradicional</div>
+                        <div class="drag-item" draggable="true" data-type="interactive">Libro interactivo</div>
+                    </div>
+                    <div class="drop-zone" id="drop-zone-1" data-accept="traditional">
+                        <p>Descripciones:</p>
+                        <div class="drag-item" data-correct="traditional">Lectura pasiva, sin participación del lector</div>
+                    </div>
+                    <div class="drop-zone" id="drop-zone-2" data-accept="interactive">
+                        <div class="drag-item" data-correct="interactive">Participación activa, multimedia, actividades</div>
+                    </div>
+                </div>
+                <div class="page-number">3</div>
+            </div>
+            
+            <!-- Importancia -->
+            <div class="page" id="importancia" role="region" aria-labelledby="importancia-heading">
+                <h2 id="importancia-heading">Importancia Del Libro Interactivo</h2>
+                <p>Este libro tiene una misión hermosa: hacer que aprender sea algo humano, cercano y significativo.</p>
+                
+                <p>Su importancia no está solo en el contenido, sino en la forma en que invita a sentir y a participar.</p>
+                
+                <p>En un tiempo donde muchos jóvenes se alejan de la lectura, el libro interactivo llega para reencantar la curiosidad.</p>
+                
+                <p>Permite aprender desde la experiencia, entender la historia desde la emoción, y conectar con la cultura desde la acción.</p>
+                
+                <p>Además, cumple un papel vital en la educación intercultural ecuatoriana: valora los saberes ancestrales, la oralidad y la diversidad lingüística, reconociendo que la enseñanza no se limita a los textos, sino que vive también en las canciones, los arrullos, los relatos y las leyendas que habitan Esmeraldas.</p>
+                
+                <p>Su importancia radica en que nos devuelve la posibilidad de aprender desde lo propio, desde la historia, la música y la vida de nuestra gente.</p>
+                                
+                <div class="page-number">4</div>
+            </div>
+            
+            <!-- Beneficios -->
+            <div class="page" id="beneficios" role="region" aria-labelledby="beneficios-heading">
+                <h2 id="beneficios-heading">Beneficios Del Libro Interactivo</h2>
+                <p>Aprender se vuelve una experiencia emocionante: cada actividad invita a descubrir algo nuevo.</p>
+                
+                <ul>
+                    <li><strong>Fortalece la identidad y el orgullo cultural:</strong> al reconocer las raíces afro esmeraldeñas, indígenas y mestizas, se despierta el sentido de pertenencia.</li>
+                    <li><strong>Desarrolla habilidades múltiples:</strong> la lectura, la escritura, la escucha y la observación se integran de forma natural.</li>
+                    <li><strong>Motiva la participación activa:</strong> los estudiantes dejan de ser espectadores para convertirse en protagonistas del aprendizaje.</li>
+                    <li><strong>Une lo tradicional con lo moderno:</strong> combina el valor de la cultura ancestral con las posibilidades de la tecnología actual.</li>
+                </ul>
+                
+                <p>Cada beneficio se traduce en un mensaje claro: aprender también puede ser sentir, disfrutar y compartir.</p>
+                                
+                <div class="activity">
+                    <h3>Actividad: Cuestionario</h3>
+                    <div class="quiz-question">
+                        <p>¿Cuál de los siguientes NO es un beneficio del libro interactivo?</p>
+                        <div class="quiz-options">
+                            <div class="quiz-option" data-correct="false">Fortalece la identidad cultural</div>
+                            <div class="quiz-option" data-correct="false">Desarrolla habilidades múltiples</div>
+                            <div class="quiz-option" data-correct="true">Promueve la lectura pasiva</div>
+                            <div class="quiz-option" data-correct="false">Une lo tradicional con lo moderno</div>
+                        </div>
+                    </div>
+                    
+                    <button class="nav-btn" style="margin-top: 10px;" id="check-quiz">Verificar Respuestas</button>
+                </div>
+                <div class="page-number">5</div>
+            </div>
+            
+            <!-- Enseñanza-Aprendizaje -->
+            <div class="page" id="ensenanza" role="region" aria-labelledby="ensenanza-heading">
+                <h2 id="ensenanza-heading">Cómo Ayuda En El Proceso De Enseñanza-Aprendizaje</h2>
+                <p>El libro interactivo transforma la manera de enseñar y aprender.</p>
+                
+                <p>Ayuda a los docentes a dinamizar sus clases, ofreciendo recursos creativos que despiertan el interés y la participación.</p>
+                
+                <p>Y a los estudiantes, les enseña a aprender con libertad, curiosidad y emoción.</p>
+                
+                <p>En el proceso enseñanza-aprendizaje, este tipo de libro favorece:</p>
+                
+                <ul>
+                    <li><strong>La comprensión significativa de los contenidos</strong>, porque cada tema se conecta con la vida real.</li>
+                    <li><strong>El aprendizaje autónomo</strong>, ya que el estudiante puede explorar a su propio ritmo.</li>
+                    <li><strong>La interculturalidad</strong>, al mostrar la diversidad de voces, tradiciones y lenguas que componen el Ecuador.</li>
+                    <li><strong>El trabajo colaborativo</strong>, invitando a compartir experiencias, reflexiones y saberes.</li>
+                </ul>
+                
+                <p>En definitiva, este libro no solo enseña conceptos: enseña a sentir la educación como un acto de identidad, amor y respeto por la vida y la cultura.</p>
+                
+                <p>En palabras sencillas:</p>
+                
+                <p>Este libro interactivo es un canto, una danza y una memoria viva.</p>
+                
+                <p>Es un puente entre el aula y la comunidad, entre el pasado y el presente, entre el conocimiento y la emoción.</p>
+                
+                <p>Y, sobre todo, es una invitación a que cada lector descubra que aprender también puede ser una forma de amar y recordar quién es.</p>
+                
+                <!-- Video sobre enseñanza -->
+                <video src="videos/video1.mp4" controls style="width: 100%; max-width: 500px; display: block; margin: 1rem auto; border-radius: 5px;" 
+                       aria-label="Video sobre el proceso de enseñanza-aprendizaje">
+                    Tu navegador no soporta el elemento video.
+                </video>
+                               
+                <div class="page-number">6</div>
+            </div>
+            
+            <!-- Orígenes -->
+            <div class="page" id="origenes" role="region" aria-labelledby="origenes-heading">
+                <h2 id="origenes-heading">Los Orígenes Del Pueblo Y Gentilicio Esmeraldeño</h2>
+                <p>Hace siglos, cuando las costas del Pacífico ecuatoriano apenas eran conocidas por los conquistadores, el territorio de Esmeraldas ya era un refugio de libertad. No nació desde la colonización, sino desde el deseo profundo de vivir sin cadenas. En el siglo XVI, un grupo de africanos esclavizados naufragó en estas costas; lejos de rendirse, se levantaron con valentía, enfrentaron la selva, el aislamiento y el miedo, y encontraron en los pueblos indígenas —como los Niguas y los Capaces— no enemigos, sino aliados. De esa unión nació una nueva historia: una comunidad libre, una de las primeras de toda América.</p>
+                
+                <p>Esa mezcla de culturas, lenguas y esperanzas dio origen a lo que Juan García Salazar llamó el "cimarronaje cotidiano", una forma de resistencia que no solo luchaba contra la opresión, sino que reinventaba la vida cada día. En medio de la selva, los nuevos pueblos afrodescendientes aprendieron a leer los ríos, a sembrar en tierra húmeda y a celebrar la libertad con el tambor y la palabra.</p>
+                
+                <p>Junto a ellos, los pueblos Chachi, Épera y Awá han mantenido por generaciones un profundo respeto por la naturaleza y una organización comunitaria que defiende su territorio frente a las amenazas del extractivismo. De esa convivencia, entre afrodescendientes, indígenas y mestizos, floreció una identidad diversa, fuerte y orgullosa: la identidad esmeraldeña.</p>
+                
+                <p>Ser esmeraldeño no es solo una cuestión de geografía, sino una forma de ser y de sentir el mundo. Es llevar en la piel la historia de la resistencia, en la voz la herencia de los ancestros y en el corazón el ritmo del mar y del tambor. A pesar de los estigmas y estereotipos impuestos por discursos externos, el pueblo esmeraldeño ha transformado su historia en orgullo, su dolor en arte, y su memoria en cultura viva.</p>
+                
+                <!-- Imagen histórica -->
+                <img src="images/historia.jpg" alt="Historia y orígenes del pueblo esmeraldeño" class="team-photo" loading="lazy">
+                
+                <div class="page-number">7</div>
+            </div>
+
+            <!-- Marco Histórico-Cultural -->
+            <div class="page" id="marco-historico" role="region" aria-labelledby="marco-historico-heading">
+                <h2 id="marco-historico-heading">Marco Histórico-Cultural</h2>
+                <p>La historia de Esmeraldas está marcada por la resistencia y la lucha por la libertad. Desde los primeros asentamientos precolombinos hasta la época colonial, esta región ha sido testigo de importantes procesos históricos que han moldeado su identidad cultural única.</p>
+                
+                <p>Durante la colonia, Esmeraldas se convirtió en un refugio para africanos esclavizados que lograron escapar, formando comunidades libres conocidas como "palenques". Estas comunidades desarrollaron sus propias formas de organización social, economía y cultura, mezclando tradiciones africanas con conocimientos indígenas.</p>
+                
+                <p>El siglo XIX marcó un hito importante con la incorporación de Esmeraldas a la República del Ecuador, proceso que trajo consigo nuevos desafíos y transformaciones en la estructura social y económica de la región.</p>
+                
+                <div class="activity">
+                    <h3>Línea de Tiempo Histórica</h3>
+                    <p>Arrastra los eventos históricos en el orden correcto:</p>
+                    <div class="drag-drop-container">
+                        <div class="drag-item" draggable="true" data-order="1">Llegada de africanos esclavizados</div>
+                        <div class="drag-item" draggable="true" data-order="2">Formación de palenques</div>
+                        <div class="drag-item" draggable="true" data-order="3">Incorporación a la República</div>
+                        <div class="drag-item" draggable="true" data-order="4">Reconocimiento cultural actual</div>
+                    </div>
+                    <div class="drop-zone" id="timeline-zone"></div>
+                </div>
+                
+                <div class="page-number">8</div>
+            </div>
+
+            <!-- Territorio, Ambiente y Cultura -->
+            <div class="page" id="territorio" role="region" aria-labelledby="territorio-heading">
+                <h2 id="territorio-heading">Territorio, Ambiente y Cultura</h2>
+                <p>El territorio esmeraldeño se caracteriza por su extraordinaria biodiversidad y riqueza natural. Desde las playas del Pacífico hasta las selvas del interior, el ambiente ha moldeado profundamente la cultura y formas de vida de sus habitantes.</p>
+                
+                <p>La relación entre el pueblo esmeraldeño y su territorio es simbiótica. El mar provee alimento y rutas de comunicación, los ríos son fuentes de vida y transporte, mientras que la selva ofrece recursos medicinales, alimenticios y materiales para la vivienda y artesanías.</p>
+                
+                <p>Esta conexión profunda con la naturaleza se refleja en las tradiciones, creencias y prácticas culturales, donde el respeto por el ambiente es un valor fundamental transmitido de generación en generación.</p>
+                
+                <!-- Galería de imágenes del territorio -->
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="images/esmeraldas1.jpg" alt="Paisaje de Esmeraldas 1" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/esmeraldas2.webp" alt="Paisaje de Esmeraldas 2" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/esmeraldas3.jpg" alt="Paisaje de Esmeraldas 3" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/esmeraldas4.jpg" alt="Paisaje de Esmeraldas 4" loading="lazy">
+                    </div>
+                </div>
+                
+                <div class="page-number">9</div>
+            </div>
+
+            <!-- Lenguas y Diversidad Lingüística -->
+            <div class="page" id="lenguas" role="region" aria-labelledby="lenguas-heading">
+                <h2 id="lenguas-heading">Lenguas y Diversidad Lingüística</h2>
+                <p>Esmeraldas es un mosaico lingüístico donde conviven varias lenguas y variantes del español, cada una con sus particularidades y riqueza cultural.</p>
+                
+                <p>El español esmeraldeño presenta características únicas influenciadas por las lenguas africanas e indígenas. Entre sus particularidades se encuentran:</p>
+                
+                <ul>
+                    <li>Ritmo y musicalidad distintiva en la entonación</li>
+                    <li>Vocabulario con raíces africanas e indígenas</li>
+                    <li>Expresiones y modismos propios de la región</li>
+                    <li>Influencia de las lenguas cha'palaa (Chachi) y épera pedede</li>
+                </ul>
+                
+                <p>Además del español, en Esmeraldas se hablan lenguas indígenas como el cha'palaa del pueblo Chachi y el épera pedede del pueblo Épera, ambas en peligro de extinción pero con esfuerzos activos de revitalización.</p>
+                
+                <div class="activity">
+                    <h3>Vocabulario Esmeraldeño</h3>
+                    <p>Relaciona las palabras con su significado:</p>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-correct="true">"Achantar" - Calmarse, tranquilizarse</div>
+                        <div class="quiz-option" data-correct="true">"Chévere" - Excelente, muy bueno</div>
+                        <div class="quiz-option" data-correct="true">"Guagua" - Niño, bebé</div>
+                        <div class="quiz-option" data-correct="false">"Candanga" - Instrumento musical</div>
+                    </div>
+                </div>
+                
+                <div class="page-number">10</div>
+            </div>
+
+            <!-- Poetas y Escritores -->
+            <div class="page" id="poetas" role="region" aria-labelledby="poetas-heading">
+                <h2 id="poetas-heading">Poetas y Escritores Esmeraldeños</h2>
+                <p>La literatura esmeraldeña es rica y diversa, con voces que han trascendido las fronteras regionales para enriquecer el panorama literario nacional. Los escritores esmeraldeños han utilizado la palabra como herramienta de resistencia, memoria y celebración de su identidad.</p>
+                
+                <p>Entre las figuras más destacadas se encuentran:</p>
+                
+                <ul>
+                    <li><strong>Nelson Estupiñán Bass</strong> - Novelista y poeta, autor de "Cuando los guayacanes florecían"</li>
+                    <li><strong>Antonio Preciado</strong> - Poeta reconocido por su obra comprometida con la afrodescendencia</li>
+                    <li><strong>Juan Montaño</strong> - Escritor y gestor cultural</li>
+                    <li><strong>Lucía Solano</strong> - Poetisa contemporánea</li>
+                </ul>
+                
+                <p>Estos autores han abordado temas como la identidad afrodescendiente, la resistencia cultural, la memoria histórica y la relación con el territorio, contribuyendo significativamente a la visibilización de la cultura esmeraldeña.</p>
+                
+                <div class="page-number">11</div>
+            </div>
+
+            <!-- Leyendas Tradicionales -->
+            <div class="page" id="leyendas" role="region" aria-labelledby="leyendas-heading">
+                <h2 id="leyendas-heading">Leyendas Tradicionales</h2>
+                <p>La tradición oral esmeraldeña está llena de leyendas y relatos que forman parte fundamental del patrimonio cultural inmaterial. Estas historias, transmitidas de generación en generación, reflejan la cosmovisión, valores y creencias del pueblo esmeraldeño.</p>
+                
+                <p>Entre las leyendas más conocidas se encuentran:</p>
+                
+                <ul>
+                    <li><strong>La Tunda</strong> - Ser mitológico que habita en los manglares</li>
+                    <li><strong>El Riviel</strong> - Espíritu protector de los ríos</li>
+                    <li><strong>La Gualgura</strong> - Leyenda sobre transformación y naturaleza</li>
+                    <li><strong>El Duende</strong> - Ser juguetón de los bosques</li>
+                </ul>
+                
+                <p>Estas leyendas no solo entretienen, sino que cumplen funciones educativas y de preservación de conocimientos ancestrales sobre el medio ambiente y las relaciones sociales.</p>
+                
+                <div class="activity">
+                    <h3>Crea tu propia leyenda</h3>
+                    <p>Inspirado en las leyendas tradicionales, escribe tu propia historia:</p>
+                    <textarea style="width: 100%; min-height: 150px; padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-top: 10px; background-color: rgba(255,255,255,0.7);" 
+                              placeholder="Escribe aquí tu leyenda..."
+                              aria-label="Área para crear tu propia leyenda inspirada en la tradición esmeraldeña"></textarea>
+                </div>
+                
+                <div class="page-number">12</div>
+            </div>
+
+            <!-- Música y Patrimonio Inmaterial -->
+            <div class="page" id="musica" role="region" aria-labelledby="musica-heading">
+                <h2 id="musica-heading">Música y Patrimonio Inmaterial</h2>
+                <p>La música esmeraldeña es una de las expresiones culturales más vibrantes y reconocidas. Con raíces africanas profundas, se caracteriza por sus ritmos contagiosos y su función social en la comunidad.</p>
+                
+                <p>Los géneros musicales tradicionales incluyen:</p>
+                
+                <ul>
+                    <li><strong>La Marimba</strong> - Instrumento emblemático y género musical</li>
+                    <li><strong>El Arrullo</strong> - Canto ceremonial y espiritual</li>
+                    <li><strong>El Currulao</strong> - Ritmo y danza tradicional</li>
+                    <li><strong>La Banda Mocha</strong> - Conjunto musical tradicional</li>
+                </ul>
+                
+                <p>La marimba esmeraldeña fue declarada Patrimonio Cultural Inmaterial de la Humanidad por la UNESCO en 2015, reconociendo su valor excepcional y la necesidad de preservar esta tradición.</p>
+                
+                <!-- Imagen de la marimba -->
+                <img src="images/marimba.jpeg" alt="Marimba esmeraldeña - Patrimonio Cultural" class="team-photo" loading="lazy">
+
+                <div class="page-number">13</div>
+            </div>
+
+            <!-- Poesía y Canciones Estudiantiles -->
+            <div class="page" id="estudiantes" role="region" aria-labelledby="estudiantes-heading">
+                <h2 id="estudiantes-heading">Poesía y Canciones Estudiantiles</h2>
+                <p>La creatividad de los jóvenes esmeraldeños se manifiesta en la poesía y canciones que reflejan su realidad, sueños y aspiraciones. Estas expresiones artísticas son herramientas importantes para la construcción de identidad y el desarrollo del pensamiento crítico.</p>
+                
+                <p>En las escuelas y colegios de Esmeraldas, se fomenta la creación literaria y musical como forma de:</p>
+                
+                <ul>
+                    <li>Preservar y renovar las tradiciones culturales</li>
+                    <li>Expresar la identidad juvenil contemporánea</li>
+                    <li>Reflexionar sobre problemáticas sociales</li>
+                    <li>Celebrar la diversidad cultural</li>
+                </ul>
+                
+                <div class="activity">
+                    <h3>Composición Creativa</h3>
+                    <p>Escribe un poema o letra de canción inspirado en la cultura esmeraldeña:</p>
+                    <textarea style="width: 100%; min-height: 200px; padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-top: 10px; background-color: rgba(255,255,255,0.7);" 
+                              placeholder="Escribe tu poema o canción aquí..."
+                              aria-label="Área para escribir poesía o canciones inspiradas en la cultura esmeraldeña"></textarea>
+
+                    <!-- Video estudiantil -->
+                    <video src="videos/video2.mp4" controls style="width: 100%; max-width: 500px; display: block; margin: 1rem auto; border-radius: 5px;" 
+                           aria-label="Video de expresiones estudiantiles">
+                        Tu navegador no soporta el elemento video.
+                    </video>
+                </div>
+                
+                <div class="page-number">14</div>
+            </div>
+            
+            <!-- Anexo -->
+            <div class="page" id="anexo" role="region" aria-labelledby="anexo-heading">
+                <h2 id="anexo-heading">Anexo: Galería del Equipo</h2>
+                <p>Conoce al equipo que hizo posible este proyecto educativo sobre la cultura esmeraldeña:</p>
+                
+                <!-- Galería del equipo -->
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="images/Anexon1.jpeg" alt="Miembro del equipo 1" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Anexon2.jpeg" alt="Miembro del equipo 2" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Anexon3.jpeg" alt="Miembro del equipo 3" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Anexon4.jpeg" alt="Miembro del equipo 4" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Anexon5.jpeg" alt="Miembro del equipo 5" loading="lazy">
+                    </div>
+                </div>
+        
+                <p style="margin-top: 2rem; text-align: center; font-style: italic;">Agradecemos a todos los colaboradores que hicieron posible este proyecto educativo.</p>
+                
+                <div class="page-number">15</div>
+            </div>
+        </div>
+        
+        <div class="book-nav">
+            <button class="nav-btn" id="prev-btn" aria-label="Página anterior" accesskey="p">Página Anterior</button>
+            <button class="nav-btn" id="next-btn" aria-label="Página siguiente" accesskey="n">Página Siguiente</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
